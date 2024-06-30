@@ -4,14 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Banner Image and Background Starts Here */
-/* .bannerBg{
-    background-image: url('../src/assets/BitMeditate.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-} */
+html{
+    scroll-behavior: smooth;
+}
 
+/* Banner Image and Background Starts Here */
 .rotateAnimation{
     animation: animName 20s linear infinite;
 }
@@ -43,60 +40,3 @@
 	}
 }
 /* Banner Image Bitmoji Ends Here */
-
-/* Banner Typing Animation Starts Here*/
-.animated-text p{
-    position: relative;
-}
-
-.animated-text p::before{
-    content: "Growing with the Flow";
-    color: #E5E5E5;
-    animation: words 20s infinite;
-}
-
-.animated-text p::after{
-    content: "";
-    position: absolute;
-    /* width: 0; */
-    height: 22px;
-    background-color: #222327;
-    border-left: 2px solid #ffffff;
-    right: 0;
-    animation: cursor .8s infinite, typing 20s steps(14) infinite;
-}
-
-@keyframes cursor{
-    to{
-        border-left: 2px solid #ff7f5000;
-    }
-}
-
-@keyframes words {
-    0%,20%{
-        content: "Growing with the Flow";
-    }
-    21%,40%{
-        content: "Turning Ideas into Realities";
-    }
-    41%,60%{
-        content: "Elevating Your Presence on Web";
-    }
-    61%,80%{
-        content: "Your Vision, Our Code";
-    }
-    81%,100%{
-        content: "Tailoring Your Ideas With Code";
-    }
-}
-
-@keyframes typing {
-    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
-        width: 0;
-    }
-    5%,20%,25%,40%,45%,60%,65%,80%,85%{
-        width: calc(100% + 8px);
-    }
-}
-
-/* Banner Typing Animation Ends Here*/

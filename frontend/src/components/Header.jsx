@@ -5,9 +5,8 @@ import { NavLink, useNavigate } from 'react-router-dom'
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
   { name: 'Projects', href: '/project' },
-  { name: 'Experience', href: '/experience' },
+  { name: 'About', href: '/about' },
   { name: 'Testimonials', href: '/testimonials' },
   { name: 'Contact', href: '/contact' },
 ]
@@ -33,7 +32,7 @@ export default function Header() {
                 </DisclosureButton>
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center md:w-1/4 lg:w-1/2">
+                <div className="flex flex-shrink-0 items-center sm:w-1/3 md:w-2/5">
                   <img
                     className="w-28 cursor-pointer"
                     src={Logo}
@@ -41,7 +40,7 @@ export default function Header() {
                     onClick={()=>navigate("/")}
                   />
                 </div>
-                <div className="hidden sm:ml-6 sm:block md:w-3/4 lg:w-1/2">
+                <div className="hidden sm:ml-6 sm:block sm:w-1/3 md:w-3/5">
                   <div className="flex space-x-4 ">
                     {navigation.map((item) => (
                       <NavLink
@@ -49,7 +48,7 @@ export default function Header() {
                         to={item.href}
                         className={({isActive})=>
                           `${isActive ? 'text-white border-b-4 border-[#6343A3] h-12' : 'text-gray-300 hover:bg-gray-700 hover:text-white'},
-                          'rounded-md px-3 py-2 text-sm font-medium'`
+                          'rounded-md md:px-1 lg:px-2 xl:px-4 py-2 text-sm lg:text-base xl:text-lg font-medium'`
                         }
                         // aria-current={item.current ? 'page' : undefined}
                       >
