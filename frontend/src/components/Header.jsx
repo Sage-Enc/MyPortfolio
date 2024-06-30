@@ -42,9 +42,9 @@ export default function Header() {
                 </div>
                 <div className="hidden sm:ml-6 sm:block sm:w-1/3 md:w-3/5">
                   <div className="flex space-x-4 ">
-                    {navigation.map((item) => (
+                    {navigation.map((item, index) => (
                       <NavLink
-                        key={item.name}
+                        key={index}
                         to={item.href}
                         className={({isActive})=>
                           `${isActive ? 'text-white border-b-4 border-[#6343A3] h-12' : 'text-gray-300 hover:bg-gray-700 hover:text-white'},
@@ -63,9 +63,9 @@ export default function Header() {
 
           <DisclosurePanel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2 flex-row">
-              {navigation.map((item) => (
+              {navigation.map((item, index) => (
                 <DisclosureButton
-                  key={item.name}
+                  key={index}
                   as="nav"
                   onClick={()=>navigate(item.href)}
                   className={({isActive})=>

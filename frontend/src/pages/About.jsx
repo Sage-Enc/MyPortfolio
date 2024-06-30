@@ -135,8 +135,9 @@ function About() {
             <img src={StudySticker} alt="Skill Sticker" />
           </div>
           <div id="skillSectionRight" className="md:w-1/2">
-            {skills.map((skill) => (
+            {skills.map((skill, index) => (
               <div
+                key={index}
                 id="skillField"
                 className="w-full flex justify-between p-2 md:p-0 px-5 sm:px-12"
               >
@@ -167,8 +168,9 @@ function About() {
             Tools Used
           </h2>
           <div id="toolSectionMain" className="flex flex-wrap justify-center lg:px-8 xl:px-20 py-8">
-            {tools.map((tool) => (
+            {tools.map((tool, index) => (
               <div
+                key={index}
                 id="toolField"
                 className="w-1/3 p-8 md:w-1/5 flex"
                 title={tool.logoName}

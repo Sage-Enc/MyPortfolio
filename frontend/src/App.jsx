@@ -3,7 +3,6 @@ import Layout from './layout/Layout.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Projects from './pages/Projects.jsx'
-import Experience from './pages/Experience.jsx'
 import Contact from './pages/Contact.jsx'
 import Testimonials from './pages/Testimonials.jsx'
 
@@ -14,7 +13,6 @@ function App() {
         <Route path='' element={<Home />} />
         <Route path='about' element={<About />} />
         <Route path='project' element={<Projects />} />
-        <Route path='experience' element={<Experience />} />
         <Route path='testimonials' element={<Testimonials />} />
         <Route path='contact' element={<Contact />} />
       </Route>

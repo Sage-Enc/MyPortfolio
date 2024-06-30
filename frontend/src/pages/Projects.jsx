@@ -5,7 +5,11 @@ function Projects() {
   const projects = [];
   return (
     <div className="font-SourceCodePro bg-[#222327] border-b-2 border-neutral-600 lg:px-10">
-      <div className="px-4 py-16 md:px-16">
+      <div className="px-4 py-10 md:px-16">
+      <h2 className="text-[#6343A3] text-2xl md:text-4xl text-center font-semibold">
+        Projects
+      </h2>
+      <br />
       {projects? (<>
         <h2 className='text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-red-700 font-extrabold'>Error!!!</h2>
         <img src={UnderConstruction} alt="" className='w-1/2 md:w-1/3 m-auto my-8' />
