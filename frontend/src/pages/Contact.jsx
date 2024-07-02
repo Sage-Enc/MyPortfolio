@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Contact() {
+  const [guestData, setGuestData] = useState({
+    guestName: "",
+    guestPhNumber: "",
+    guestEmail: "",
+    guestMessage: "",
+  });
+
+  const guestDataChange = (e) => {
+    const {name, value} = e.target;
+
+    setGuestData({...guestData, [name]:value})
+  }
+
+  const postData = (e) => {
+    e.preventDefault()
+    console.log(guestData)
+  }
+
   return (
     <div className="font-SourceCodePro bg-[#222327] border-b-2 border-neutral-600 md:px-16 lg:px-28:px-40">
       <br />
@@ -21,8 +39,10 @@ export default function Contact() {
           <input
             type="text"
             name="guestName"
-            className="w-4/6 px-2 border-2 border-neutral-600 rounded-md focus:outline-none focus:ring focus:ring-[#6343A3] bg-[#222327] text-white"
+            id="guestName"
+            className="w-4/6 px-2 border-2 border-neutral-600 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6343A3] bg-[#222327] text-white box-border"
             placeholder="Enter Your Name Here"
+            onChange={guestDataChange}
           />
         </div>
         <div id="formField" className="w-full flex justify-around py-2">
@@ -32,8 +52,10 @@ export default function Contact() {
           <input
             type="email"
             name="guestEmail"
+            id="guestEmail"
             placeholder="Enter Your Email Here"
-            className="w-4/6 px-2 border-2 border-neutral-600 rounded-md focus:outline-none focus:ring focus:ring-[#6343A3] bg-[#222327] text-white"
+            className="w-4/6 px-2 border-2 border-neutral-600 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6343A3] bg-[#222327] text-white box-border"
+            onChange={guestDataChange}
           />
         </div>
         <div id="formField" className="w-full flex justify-around py-2">
@@ -41,20 +63,35 @@ export default function Contact() {
             Phone Number
           </label>
           <input
-            type="tel"
+            type="number"
             name="guestPhNumber"
+            id="guestPhNumber"
             placeholder="Enter Your Phone Number Here"
-            className="w-4/6 px-2 border-2 border-neutral-600 rounded-md focus:outline-none focus:ring focus:ring-[#6343A3] bg-[#222327] text-white"
+            className="w-4/6 px-2 border-2 border-neutral-600 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6343A3] bg-[#222327] text-white box-border"
+            onChange={guestDataChange}
           />
         </div>
         <div id="formField" className="w-full flex justify-around py-2">
           <label htmlFor="guestMessage" className="w-1/6 text-[#e5e5e5]">
             Message
           </label>
-          <textarea type="text" name="guestMessage" placeholder="Enter Your Message Here" className="w-4/6 px-2 min-h-28 lg:min-h-40 border-2 border-neutral-600 rounded-md focus:outline-none focus:ring focus:ring-[#6343A3] bg-[#222327] text-white" />
+          <textarea
+            type="text"
+            name="guestMessage"
+            id="guestMessage"
+            placeholder="Enter Your Message Here"
+            className="w-4/6 px-2 min-h-28 lg:min-h-40 border-2 border-neutral-600 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6343A3] bg-[#222327] text-white box-border"
+            onChange={guestDataChange}
+          />
         </div>
         <br />
-        <button type="submit" className="bg-[#6343A3] text-white w-1/4 font-semibold rounded-md mx-auto m-2 p-2">Submit</button>
+        <button
+          type="submit"
+          className="bg-[#6343A3] text-white w-1/4 font-semibold rounded-md mx-auto m-2 p-2"
+          onClick={postData}
+        >
+          Submit
+        </button>
       </form>
     </div>
   );

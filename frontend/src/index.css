@@ -1,42 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 /* Banner Image and Background Starts Here */
-.rotateAnimation{
-    animation: animName 20s linear infinite;
+.rotateAnimation {
+  animation: animName 20s linear infinite;
 }
 
 @keyframes animName {
-    0%{
-       transform: rotate(0deg);
-      }
-   100%{
-       transform: rotate(360deg);
-      }
-   }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* Banner Image and Background Ends Here */
 
 /* Banner Image Bitmoji Starts Here */
-.floatAnimation{
-	animation: float 6s ease-in-out infinite;
+.floatAnimation {
+  animation: float 6s ease-in-out infinite;
 }
 
 @keyframes float {
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-40px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-40px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
 /* Banner Image Bitmoji Ends Here */
+
+@layer base {
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    @apply appearance-none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    @apply appearance-none;
+    -moz-appearance: textfield;
+  }
+}
+

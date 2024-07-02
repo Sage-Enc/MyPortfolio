@@ -17,7 +17,7 @@ function Testimonials() {
             <h2 className="text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-red-700 font-extrabold">
               Error!!!
             </h2>
-            <img src={Awkward} alt="" className="w-1/2 md:w-1/3 m-auto my-8" />
+            <img src={Awkward} alt="" className="w-1/2 md:w-1/4 m-auto my-8" />
             <h2 className=" text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#e5e5e5]">
               I've Got No Testimonials Yet!!!
             </h2>
